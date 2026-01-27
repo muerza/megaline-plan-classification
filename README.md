@@ -15,8 +15,7 @@ Tu objetivo es **crear un modelo de clasificación** que escoja el plan correcto
 Clientes utilizan problemas heredados.
 
 ### Solucion 
-Crear un modelo que recomiende a usuarios nuevos a seleccinar el plan correcto para ellos.
-
+Crear un modelo que recomiende a usuarios nuevos a seleccionar el plan correcto para ellos.
 
 ### 📊 Descripción de los datos
 
@@ -39,8 +38,8 @@ numpy
 pandas
 
 
-### Descrubrimientos 
+### Descubrimientos 
 
-### Cloncluciones 
+### Conclusiones 
 
-### Pasos a seguir 
+### Recomendaciones 
