@@ -14,7 +14,7 @@ Tu objetivo es **crear un modelo de clasificación** que escoja el plan correcto
 ### Problema del Negocio:
 Clientes utilizan problemas heredados.
 
-### Solucion 
+### Solución 
 Crear un modelo que recomiende a usuarios nuevos a seleccionar el plan correcto para ellos.
 
 ### 📊 Descripción de los datos
