@@ -36,10 +36,22 @@ Dataset:
 ## Result ✅
 Final model: **RandomForestClassifier**
 
-- **Validation Accuracy: 0.8085**
+- **Validation Accuracy: 0.8085** 🎯
 
 This exceeds the required threshold and provides a solid balance of performance and stability.
 
 ---
 
 ## Suggested Repo Structure 🗂️
+
+```text
+.
+├── data/
+│   └── users_behavior.csv
+├── notebooks/
+│   └── megaline-plan-classification.ipynb
+├── src/                  # (optional) reusable functions
+│   ├── train.py
+│   └── utils.py
+├── README.md
+└── requirements.txt
