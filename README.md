@@ -1,45 +1,58 @@
-## 📱 Proyecto: Clasificación de Planes de Megaline
+# Beta Bank Churn Prediction 🏦📉
 
-### 🧩 Descripción del proyecto
+Machine Learning project to **predict customer churn** (whether a client will leave the bank soon).  
+The goal is to help the business focus retention efforts on high-risk customers.
 
-La compañía móvil **Megaline** no está satisfecha al ver que muchos de sus clientes utilizan planes heredados.  
-Quieren desarrollar un modelo que pueda analizar el comportamiento de los clientes y recomendar uno de los nuevos planes de Megaline: **Smart** o **Ultra**.
+---
 
-Tienes acceso a los datos de comportamiento de los suscriptores que ya se han cambiado a los planes nuevos.  
-Tu objetivo es **crear un modelo de clasificación** que escoja el plan correcto.
+## Objective 🎯
+Build a classification model with the **highest F1 score possible** and also report **AUC-ROC**.
 
-> 🎯 **Umbral de exactitud mínima:** 0.75  
-> Dataset: `/datasets/users_behavior.csv`
+Target:
+- `Exited` (1 = customer left, 0 = stayed)
 
-### Problema del Negocio:
-Clientes utilizan problemas heredados.
+---
 
-### Solución 
-Crear un modelo que recomiende a usuarios nuevos a seleccionar el plan correcto para ellos.
+## Data 📦
+File:
+- `Churn.csv`
 
-### 📊 Descripción de los datos
+Features include customer profile and banking behavior (e.g., credit score, geography, age, balance, number of products, etc.).
 
-Cada observación en el dataset contiene información mensual sobre el comportamiento de un usuario.
+---
 
-| Columna | Descripción |
-|----------|--------------|
-| `calls` | Número de llamadas |
-| `minutes` | Duración total de las llamadas (en minutos) |
-| `messages` | Número de mensajes de texto |
-| `mb_used` | Tráfico de Internet utilizado (en MB) |
-| `is_ultra` | Plan actual del mes: Ultra (1) / Smart (0) |
+## Key Challenge ⚖️
+The dataset is **imbalanced** (most customers stay).  
+To handle this, I applied **upsampling** on the training set to improve recall and overall F1.
 
-### 📦 librerías 
+---
 
-sklearn
-pathlib
-matplotlib
-numpy
-pandas
+## Approach 🧠
+1. Load and inspect the dataset
+2. Handle missing values (including a “was missing” indicator)
+3. Encode categorical features
+4. Scale numeric features where needed
+5. Train/validation split
+6. Train baseline models and tune hyperparameters
+7. Evaluate with **F1** and **AUC-ROC**
 
+---
 
-### Descubrimientos 
+## Models Tested 🔍
+- DecisionTreeClassifier (baseline + tuned)
+- RandomForestClassifier (baseline + tuned)
+- LogisticRegression (reference)
 
-### Conclusiones 
+✅ Final choice: **RandomForestClassifier** (best overall balance)
 
-### Recomendaciones 
+---
+
+## Results 📈
+- **F1 ≈ 0.62**
+- **AUC-ROC ≈ 0.87**
+
+This model provides a strong tradeoff between catching churners and avoiding too many false positives.
+
+---
+
+## Suggested Repo Structure 🗂️
