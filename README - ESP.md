@@ -1,15 +1,15 @@
-# Megaline Plan Classification 📱🤖
+# Clasificación de planes Megaline 📱🤖
 
-Machine Learning project to **recommend the right mobile plan** for Megaline customers: **Smart** or **Ultra**.  
-The model learns from customer behavior data to support plan upgrades and reduce legacy-plan usage.
+Proyecto de *Machine Learning* para **recomendar el plan móvil correcto** para clientes de Megaline: **Smart** o **Ultra**.  
+El modelo aprende del comportamiento de los usuarios para apoyar **cambios de plan** y reducir el uso de planes antiguos.
 
 ---
 
-## Goal 🎯
-Build a classification model to predict:
+## Objetivo 🎯
+Construir un modelo de clasificación para predecir:
 - `is_ultra` (1 = Ultra, 0 = Smart)
 
-Minimum target:
+Meta mínima:
 - ✅ **Accuracy ≥ 0.75**
 
 Dataset:
@@ -17,32 +17,32 @@ Dataset:
 
 ---
 
-## Approach 🧠
-- Load and explore data
-- Split into train/validation sets
-- Train baseline models
-- Tune hyperparameters
-- Evaluate using **accuracy** (and review confusion matrix)
+## Enfoque 🧠
+- Cargar y explorar los datos
+- Dividir en conjuntos de entrenamiento/validación
+- Entrenar modelos base (baseline)
+- Ajustar hiperparámetros
+- Evaluar usando **accuracy** (y revisar la matriz de confusión)
 
 ---
 
-## Models Tested 🔍
-- Decision Tree
+## Modelos probados 🔍
+- Árbol de decisión
 - Random Forest ✅ (final)
-- Logistic Regression
+- Regresión logística
 
 ---
 
-## Result ✅
-Final model: **RandomForestClassifier**
+## Resultado ✅
+Modelo final: **RandomForestClassifier**
 
-- **Validation Accuracy: 0.8085** 🎯
+- **Accuracy en validación: 0.8085** 🎯
 
-This exceeds the required threshold and provides a solid balance of performance and stability.
+Esto supera el umbral requerido y ofrece un buen balance entre desempeño y estabilidad.
 
 ---
 
-## Suggested Repo Structure 🗂️
+## Estructura sugerida del repositorio 🗂️
 
 ```text
 .
@@ -50,7 +50,7 @@ This exceeds the required threshold and provides a solid balance of performance 
 │   └── users_behavior.csv
 ├── notebooks/
 │   └── megaline-plan-classification.ipynb
-├── src/                  # (optional) reusable functions
+├── src/                  # (opcional) funciones reutilizables
 │   ├── train.py
 │   └── utils.py
 ├── README.md
