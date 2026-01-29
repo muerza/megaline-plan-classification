@@ -1,57 +1,44 @@
-# Beta Bank Churn Prediction 🏦📉
+# Megaline Plan Classification 📱🤖
 
-Machine Learning project to **predict customer churn** (whether a client will leave the bank soon).  
-The goal is to help the business focus retention efforts on high-risk customers.
-
----
-
-## Objective 🎯
-Build a classification model with the **highest F1 score possible** and also report **AUC-ROC**.
-
-Target:
-- `Exited` (1 = customer left, 0 = stayed)
+Machine Learning project to **recommend the right mobile plan** for Megaline customers: **Smart** or **Ultra**.  
+The model learns from customer behavior data to support plan upgrades and reduce legacy-plan usage.
 
 ---
 
-## Data 📦
-File:
-- `Churn.csv`
+## Goal 🎯
+Build a classification model to predict:
+- `is_ultra` (1 = Ultra, 0 = Smart)
 
-Features include customer profile and banking behavior (e.g., credit score, geography, age, balance, number of products, etc.).
+Minimum target:
+- ✅ **Accuracy ≥ 0.75**
 
----
-
-## Key Challenge ⚖️
-The dataset is **imbalanced** (most customers stay).  
-To handle this, I applied **upsampling** on the training set to improve recall and overall F1.
+Dataset:
+- `users_behavior.csv`
 
 ---
 
 ## Approach 🧠
-1. Load and inspect the dataset
-2. Handle missing values (including a “was missing” indicator)
-3. Encode categorical features
-4. Scale numeric features where needed
-5. Train/validation split
-6. Train baseline models and tune hyperparameters
-7. Evaluate with **F1** and **AUC-ROC**
+- Load and explore data
+- Split into train/validation sets
+- Train baseline models
+- Tune hyperparameters
+- Evaluate using **accuracy** (and review confusion matrix)
 
 ---
 
 ## Models Tested 🔍
-- DecisionTreeClassifier (baseline + tuned)
-- RandomForestClassifier (baseline + tuned)
-- LogisticRegression (reference)
-
-✅ Final choice: **RandomForestClassifier** (best overall balance)
+- Decision Tree
+- Random Forest ✅ (final)
+- Logistic Regression
 
 ---
 
-## Results 📈
-- **F1 ≈ 0.62**
-- **AUC-ROC ≈ 0.87**
+## Result ✅
+Final model: **RandomForestClassifier**
 
-This model provides a strong tradeoff between catching churners and avoiding too many false positives.
+- **Validation Accuracy: 0.8085**
+
+This exceeds the required threshold and provides a solid balance of performance and stability.
 
 ---
 
